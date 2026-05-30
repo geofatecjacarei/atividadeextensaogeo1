@@ -44,6 +44,7 @@
         }
         </style>
         <title></title>
+
 <style>
 #header{
     position: absolute;
@@ -57,6 +58,7 @@
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     padding: 10px 20px;
 
@@ -76,21 +78,20 @@
 .titulo{
     flex: 1;
     text-align: center;
-
-    padding: 0 20px;
-
-    overflow: hidden;
+    padding: 0 10px;
 }
 
 .titulo h1{
     margin: 0;
-    font-size: 36px;
+    font-size: clamp(14px, 3vw, 30px);
     color: #ffffff;
+    line-height: 1.1;
+    white-space: normal;
 }
 
 .titulo p{
     margin: 4px 0 0 0;
-    font-size: 18px;
+    font-size: clamp(10px, 1.5vw, 18px);
     color: #ffffff;
 }
 
@@ -102,7 +103,65 @@
     width: 100%;
     height: calc(100% - 90px);
 }
+
+/* Tablets */
+@media (max-width: 768px){
+
+    #header{
+        height: 70px;
+        padding: 5px 10px;
+    }
+
+    .logo{
+        height: 40px;
+    }
+
+    .titulo h1{
+        font-size: 18px;
+    }
+
+    .titulo p{
+        font-size: 11px;
+    }
+
+    #map{
+        top: 70px;
+        height: calc(100% - 70px);
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px){
+
+    #header{
+        height: 60px;
+        padding: 5px;
+    }
+
+    .logo{
+        height: 30px;
+    }
+
+    .titulo{
+        padding: 0 5px;
+    }
+
+    .titulo h1{
+        font-size: 14px;
+    }
+
+    .titulo p{
+        font-size: 9px;
+        margin-top: 2px;
+    }
+
+    #map{
+        top: 60px;
+        height: calc(100% - 60px);
+    }
+}
 </style>
+        
     </head>
     <body>
         <div id="header">
